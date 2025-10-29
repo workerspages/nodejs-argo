@@ -1,6 +1,6 @@
 FROM node:alpine3.20
 
-WORKDIR /app
+WORKDIR /tmp
 
 COPY . .
 
@@ -13,4 +13,3 @@ RUN apk update && apk upgrade &&\
     npm install
 
 CMD ["node", "index.js"]
-
