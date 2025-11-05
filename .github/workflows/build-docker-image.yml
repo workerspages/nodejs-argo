@@ -39,8 +39,8 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: |
-          # ghcr.io/${{ github.repository_owner }}/xxxx:latest
-            ghcr.io/${{ github.repository_owner }}/railway:latest
+          # ghcr.io/${{ github.repository_owner }}/xxxx:xxxx
+            ghcr.io/${{ github.repository_owner }}/railway:railway
           # ghcr.io/${{ github.repository_owner }}/render_com:latest
           # ghcr.io/${{ github.repository_owner }}/nodejs:latest
           labels: |
