@@ -110,7 +110,7 @@ function cleanupOldFiles() {
 
 
 
-
+// ========= 定义伪装网页的 HTML 内容 开始（服务器维护中）============
 const htmlContent = `
 <!DOCTYPE html>
 <html lang="en">
@@ -144,7 +144,7 @@ app.get("/", function(req, res) {
   res.setHeader('Content-Type', 'text/html');
   res.send(htmlContent);
 });
-
+// ========= 定义伪装网页的 HTML 内容 结束 ============
 
 
 
