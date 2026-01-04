@@ -13,22 +13,22 @@ const UPLOAD_URL = process.env.UPLOAD_URL || '';
 const PROJECT_URL = process.env.PROJECT_URL || '';    
 const AUTO_ACCESS = process.env.AUTO_ACCESS || false; 
 const FILE_PATH = process.env.FILE_PATH || './tmp';   
-const SUB_PATH = process.env.SUB_PATH || 'sub';       
+const SUB_PATH = process.env.SUB_PATH || 'sub';       // 订阅路径
 
 // 端口配置
 const PORT = process.env.SERVER_PORT || process.env.PORT || 3000; // 公网主端口（Xray监听）
 const WEB_PORT = 4000;                                            // 伪装网页端口（本地）
-const ARGO_PORT = process.env.ARGO_PORT || 8001;                  // Argo隧道端口
+const ARGO_PORT = process.env.ARGO_PORT || 8001;                  // 固定隧道端口,使用token需在cloudflare后台设置和这里一致
 
-const UUID = process.env.UUID || '9afd1229-b893-40c1-84dd-51e7ce204913'; 
+const UUID = process.env.UUID || '9afd1229-b893-40c1-84dd-51e7ce204913'; // 使用哪吒v1,在不同的平台运行需修改UUID,否则会覆盖
 const NEZHA_SERVER = process.env.NEZHA_SERVER || '';        
 const NEZHA_PORT = process.env.NEZHA_PORT || '';            
 const NEZHA_KEY = process.env.NEZHA_KEY || '';              
-const ARGO_DOMAIN = process.env.ARGO_DOMAIN || '';          
-const ARGO_AUTH = process.env.ARGO_AUTH || '';              
-const CFIP = process.env.CFIP || 'cdns.doon.eu.org';        
+const ARGO_DOMAIN = process.env.ARGO_DOMAIN || '';         // 固定隧道域名,留空即启用临时隧道  
+const ARGO_AUTH = process.env.ARGO_AUTH || '';             // 固定隧道密钥json或token,留空即启用临时隧道,json获取地址：https://json.zone.id  
+const CFIP = process.env.CFIP || 'cdns.doon.eu.org';       // 节点优选域名或优选ip  
 const CFPORT = process.env.CFPORT || 443;                   
-const NAME = process.env.NAME || '';                        
+const NAME = process.env.NAME || '';                       // 节点名称       
 
 // 创建运行文件夹
 if (!fs.existsSync(FILE_PATH)) {
